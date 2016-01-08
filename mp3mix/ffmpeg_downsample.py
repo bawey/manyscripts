@@ -51,7 +51,7 @@ def main(args):
     if info.bitrate > args['bitrate'] + args['tolerance']:
         print "Song\'s %s bitrate %d is high enough for conversion." % (info.title, info.bitrate)
         
-        command = "ffmpeg -i \"%s\" \"%s\" -b %d " % (args['input'], args['output'], args['bitrate'])
+        command = "ffmpeg -n -i \"%s\" \"%s\" -b %d " % (args['input'], args['output'], args['bitrate'])
         if not info.title:
             command +=" -metadata title=\"TrackInfo.filename\""
         

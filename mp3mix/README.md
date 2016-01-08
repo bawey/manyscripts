@@ -20,6 +20,5 @@ Besides the syntax is very similar to that of ffmpeg:
     `ffmpeg_downsample -i input.mp3 -o output.mp3 -b desired_kbps -t tolerance_kbps`
 To launch the scrpti for a whole folder, invoke:
     `batch_downsample input_dir output_dir`
- 
-
+This will also save the files under the filename being a md5 sum of their contents. Should the output file(s) already exist, they will be skipped (`-n` option passed to `ffmpeg` from `ffmpeg_downsample.py`)
 
